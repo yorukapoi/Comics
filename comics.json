@@ -1,0 +1,105 @@
+{
+    "comics": [
+        {
+            "id": 1,
+            "title": "Phantasmal Ardor",
+            "folder": "Phantasmal Ardor",
+            "thumbnail": "images/phantasmalardor.jpg",
+            "genres": ["Romance", "Fantasy", "Drama", "Enemies to Lovers"],
+            "chapters": [
+                {
+                    "id": 1,
+                    "title": "Chapter 1: The Beginning",
+                    "folder": "Chapter 1",
+                    "release_date": "2024-01-01",
+                    "pages": []
+                },
+                {
+                    "id": 2,
+                    "title": "Chapter 2: The Journey",
+                    "folder": "Chapter 2",
+                    "release_date": "2024-02-01",
+                    "pages": []
+                },
+                {
+                    "id": 3,
+                    "title": "Chapter 3: Culmination",
+                    "folder": "Chapter 3",
+                    "release_date": "2024-03-01",
+                    "pages": []
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Precarious Alley",
+            "folder": "Precarious Alley",
+            "thumbnail": "images/placeholder.jpg",
+            "genres": ["Supernatural", "Action", "Fantasy", "Shounen"],
+            "chapters": [
+                {
+                    "id": 1,
+                    "title": "Chapter 1: The Beginning",
+                    "folder": "Chapter 1",
+                    "release_date": "2024-01-01",
+                    "pages": []
+                },
+                {
+                    "id": 2,
+                    "title": "Chapter 2: The Journey",
+                    "folder": "Chapter 2",
+                    "release_date": "2024-03-01",
+                    "pages": []
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Pages of Enchainment",
+            "folder": "Pages of Enchainment",
+            "thumbnail": "images/pagesofencahinment.jpg",
+            "genres": ["Isekai", "Romance", "Harem", "Josei"],
+            "chapters": [
+                {
+                    "id": 1,
+                    "title": "Chapter 1: The Beginning",
+                    "folder": "Chapter 1",
+                    "release_date": "2024-01-01",
+                    "pages": []
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Yesterday's Echo",
+            "folder": "Yesterday's Echo",
+            "thumbnail": "images/placeholder.jpg",
+            "genres": ["BL", "Drama", "Omegaverse", "Fantasy"],
+            "chapters": [
+                {
+                    "id": 1,
+                    "title": "Chapter 1: The Beginning",
+                    "folder": "Chapter 1",
+                    "release_date": "2024-01-01",
+                    "pages": []
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Kuzman and Figaro",
+            "folder": "Kuzman and Figaro",
+            "thumbnail": "images/placeholder.jpg",
+            "genres": ["Slice of life", "Comedy", "Oneshots", "Fantasy"],
+            "chapters": [
+                {
+                    "id": 1,
+                    "title": "Chapter 1: The Beginning",
+                    "folder": "Chapter 1",
+                    "release_date": "2024-01-01",
+                    "pages": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,347 @@
+/* Base Styles */
+:root {
+    --sidebar-width: 300px;
+    --header-height: 60px;
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #f66885;
+    --text-color: #ecf0f1;
+    --background-color: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Reader Container */
+.reader-container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Sidebar Styles */
+.chapter-sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary-color);
+    padding: 1rem;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.chapter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.chapter-item {
+    padding: 0.75rem;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.chapter-item:hover {
+    background-color: var(--accent-color);
+}
+
+.chapter-item.active {
+    background-color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.reader-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 1rem;
+}
+
+.reader-header, .reader-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 4px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: #2980b9;
+}
+
+.nav-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Pages Container */
+.pages-container {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.comic-page {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.comic-page.loaded {
+    opacity: 1;
+}
+
+.comic-page img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Chapter Selection */
+.mobile-chapter-select {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+#show-chapters {
+    padding: 1rem;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 50%;
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .chapter-sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1001;
+        background-color: var(--background-color);
+        padding: 2rem 1rem;
+    }
+
+    .chapter-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .reader-content {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .mobile-chapter-select {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+    }
+
+    #show-chapters {
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .reader-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--background-color);
+        padding: 1rem;
+        z-index: 999;
+        justify-content: center;
+    }
+
+    .reader-header .nav-btn {
+        display: none; /* Hide top navigation buttons on mobile */
+    }
+
+    .reader-header h1 {
+        font-size: 1rem;
+        margin: 0;
+        padding-left: 60px; /* Space for hamburger menu */
+    }
+
+    .pages-container {
+        margin-top: 60px; /* Space for fixed header */
+        gap: 0;
+        padding-bottom: 60px; /* Space for fixed footer */
+    }
+
+    .comic-page {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .comic-page img {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .reader-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--background-color);
+        padding: 0.5rem;
+        z-index: 999;
+    }
+
+    .nav-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        flex: 1;
+        margin: 0 0.25rem;
+    }
+
+    /* Chapter list styling for mobile */
+    .chapter-list {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .chapter-item {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .sidebar-header {
+        margin-bottom: 2rem;
+    }
+
+    .sidebar-header h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Loading indicator adjustments for mobile */
+    .loading {
+        margin: 4rem auto;
+    }
+
+    /* No images message adjustments for mobile */
+    .no-images-message {
+        margin: 4rem 1rem;
+        padding: 1rem;
+    }
+
+    /* Overlay styling */
+    .sidebar-overlay {
+        background-color: var(--background-color);
+        opacity: 0.95;
+    }
+}
+
+/* Additional mobile optimizations for smaller screens */
+@media (max-width: 480px) {
+    .chapter-item {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .nav-btn {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Loading Indicator */
+.loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--accent-color);
+    animation: spin 1s ease-in-out infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Overlay for Mobile Sidebar */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* No Images Message */
+.no-images-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}

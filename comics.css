@@ -1,0 +1,322 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-blue);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Stars Container */
+.stars-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+
+.stars-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Comics Container */
+.comics-container {
+    min-height: calc(100vh - var(--header-height));
+    padding-top: var(--header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Comics Grid */
+.comics-grid {
+    .comics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem; /* Space between cards */
+        padding: 1rem; /* Space from edges */
+        justify-content: center; /* Center align the grid */
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Comic Card */
+.comic-card {
+    flex: 0 0 300px;
+    background: var(--dark-blue);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Thumbnail */
+.comic-thumbnail {
+    position: relative;
+    padding-top: 140%;
+    overflow: hidden;
+    background: var(--dark-blue);
+}
+
+.comic-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay */
+.comic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 22, 36, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.comic-card:hover .comic-overlay {
+    opacity: 1;
+}
+
+.comic-card:hover .comic-thumbnail img {
+    transform: scale(1.05);
+}
+
+/* Read Button */
+.read-button {
+    color: var(--light-gray);
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--light-gray);
+    border-radius: 25px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.read-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Genre Tags */
+.genre-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.genre-tag {
+    color: var(--light-gray);
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    font-family: 'Chivo', sans-serif;
+}
+
+/* Comic Info */
+.comic-info {
+    padding: 1.5rem;
+    text-align: center;
+    background: rgba(240, 241, 242, 0.95);
+    border-radius: 0 0 15px 15px;
+}
+
+.comic-info h2 {
+    color: var(--dark-blue);
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .comics-container {
+        padding-top: var(--header-height);
+        height: calc(100vh - var(--header-height));
+        overflow: hidden;
+    }
+
+    .comics-grid {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .comic-card {
+        position: absolute;
+        width: 85vw;
+        max-width: 500px;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s ease;
+    }
+
+    .comic-card.active {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        pointer-events: auto;
+        z-index: 2;
+    }
+
+    .comic-card.previous {
+        opacity: 0.3;
+        transform: translate(-150%, -50%) scale(0.8);
+    }
+
+    .comic-card.next {
+        opacity: 0.3;
+        transform: translate(50%, -50%) scale(0.8);
+    }
+
+    .comic-thumbnail {
+        height: 60vh;
+        padding-top: 0;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .comic-overlay {
+        opacity: 1;
+        background: rgba(12, 22, 36, 0.5);
+    }
+
+    /* Carousel Indicators */
+    .carousel-indicators {
+        position: fixed;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        z-index: 3;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(240, 241, 242, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .indicator.active {
+        background: var(--light-gray);
+        transform: scale(1.2);
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .comic-card {
+        width: 95vw;
+        height: 80vh;
+    }
+
+    .read-button {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.8rem;
+    }
+
+    .genre-tag {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .comic-info h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Responsive adjustments for very wide screens */
+@media (min-width: 1400px) {
+    .comics-grid {
+        gap: 3rem;
+    }
+}
+
+/* Responsive adjustments for smaller desktop screens */
+@media (max-width: 1200px) {
+    .comic-card {
+        flex: 0 0 250px;
+    }
+}
+
+/* Header Mobile Styles */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 0.5rem 0;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .logo-container {
+        width: 80px;
+        height: 100px;
+    }
+}
+
+/* Ensure touch targets are large enough on mobile */
+@media (hover: none) {
+    .read-button {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .genre-tags {
+        gap: 0.8rem;
+    }
+}
+
+/* Add to ensure header stays on top */
+.main-header {
+    z-index: 10;
+    position: relative;
+} 

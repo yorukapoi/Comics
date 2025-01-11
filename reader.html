@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Reader - Mousemallow</title>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    
+    <!-- Fonts and Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="reader.css">
+</head>
+<body>
+    <div class="reader-container">
+        <!-- Chapter Navigation Sidebar -->
+        <aside class="chapter-sidebar">
+            <div class="sidebar-header">
+                <h2 id="comic-title">Loading...</h2>
+                <button id="sort-chapters" title="Sort Chapters">
+                    <i class="fas fa-sort"></i>
+                </button>
+            </div>
+            <div class="chapter-list" id="chapter-list">
+                <!-- Chapters will be populated by JavaScript -->
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="reader-content">
+            <div class="reader-header">
+                <button class="nav-btn" id="prev-chapter">
+                    <i class="fas fa-chevron-left"></i> Previous Chapter
+                </button>
+                <h1 id="chapter-title">Loading...</h1>
+                <button class="nav-btn" id="next-chapter">
+                    Next Chapter <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="pages-container" id="pages-container">
+                <!-- Pages will be populated by JavaScript -->
+            </div>
+
+            <div class="reader-footer">
+                <button class="nav-btn" id="prev-chapter-bottom">
+                    <i class="fas fa-chevron-left"></i> Previous Chapter
+                </button>
+                <button class="nav-btn" id="next-chapter-bottom">
+                    Next Chapter <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <!-- Mobile Chapter Selection -->
+        <div class="mobile-chapter-select">
+            <button id="show-chapters">
+                <i class="fas fa-bars"></i> Chapters
+            </button>
+        </div>
+    </div>
+
+    <script src="reader.js"></script>
+</body>
+</html>

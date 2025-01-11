@@ -1,0 +1,73 @@
+{
+    "banner": {
+        "image": "artwork/muhappy.png",
+        "title": "Mousemallow Artworks"
+    },
+    "artworks": [
+        {
+            "id": 1,
+            "title": "Yeonjun",
+            "image": "artwork/yeonjun1.png",
+            "description": "Yeonjunsketchpage"
+        },
+        {
+            "id": 2,
+            "title": "Jun",
+            "image": "artwork/yeonjun2.png",
+            "description": "Yeonjun"
+        },
+        {
+            "id": 3,
+            "title": "San",
+            "image": "artwork/san.png",
+            "description": "San pouty"
+        },
+        {
+            "id": 4,
+            "title": "Sun",
+            "image": "artwork/sun.png",
+            "description": "Illustration"
+        },
+        {
+            "id": 5,
+            "title": "Nolan",
+            "image": "artwork/nolan.png",
+            "description": "Illustration"
+        },
+        {
+            "id": 6,
+            "title": "Hera Eunomia",
+            "image": "artwork/herahera.png",
+            "description": "Illustration"
+        },
+        {
+            "id": 7,
+            "title": "Bunibuni",
+            "image": "artwork/bunibuni.png",
+            "description": "Illustration"
+        },
+        {
+            "id": 8,
+            "title": "Leon Artstyle Challenge 2019",
+            "image": "artwork/2021.png",
+            "description": "Illustration"
+        },
+        {
+            "id": 9,
+            "title": "Leo",
+            "image": "artwork/leorain.jpg",
+            "description": "Illustration"
+        },
+        {"id": 10,
+            "title": "Leo",
+            "image": "artwork/Captureff.png",
+            "description": "Illustration"
+        },
+        {"id": 11,
+        "title": "Leo",
+        "image": "artwork/Leon.png",
+        "description": "Illustration"
+    }
+        
+    ]
+} 
