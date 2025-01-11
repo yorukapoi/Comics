@@ -1227,3 +1227,51 @@ footer {
         padding: 0.5rem 0;
     }
 }
+
+.social-media {
+    padding-top: 20px;
+   justify-content: center;
+   gap: 10px;
+   display: flex;
+}
+
+.cara {
+    width: 40px;
+    height: 45px;
+}
+
+.vgen {
+    width: 40px;
+    height: 45px;
+}
+
+.bluesky {
+    width: 40px; 
+    height: 35px; 
+   
+    
+}
+
+a.social-link {
+    width: 40px;
+    height: 52.2px;
+}
+
+img.bluesky {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.tiktok {
+    width: 40px; 
+    height: 35px; 
+}
+
+img.tiktok {
+    padding-top: 8px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
