@@ -169,8 +169,8 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .comics-container {
-        padding-top: var(--header-height);
-        height: calc(100vh - var(--header-height));
+        padding-top: 20px;
+        height: calc(100vh - 10px);
         overflow: hidden;
     }
 
