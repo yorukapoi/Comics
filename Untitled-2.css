@@ -166,7 +166,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: url('artwork/muhappy.png') no-repeat center center;
+    background: url('artwork/HeraSummons.webp') no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     color: var(--light-gray);
@@ -896,7 +896,7 @@ footer {
     /* Hero Section Mobile Adjustments */
     .hero-section {
         min-height: 100vh;
-        background-image: url('artwork/muhappy.png');
+        background-image: url('artwork/HeraSummons.webp');
         background-size: cover;
         background-position: center;
         padding-top: var(--header-height);

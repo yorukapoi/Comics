@@ -1,72 +1,72 @@
 {
     "banner": {
-        "image": "artwork/muhappy.png",
+        "image": "artwork/HeraSummons.webp",
         "title": "Mousemallow Artworks"
     },
     "artworks": [
         {
             "id": 1,
-            "title": "Yeonjun",
-            "image": "artwork/yeonjun1.png",
-            "description": "Yeonjunsketchpage"
+            "title": "Yeonjun TXT",
+            "image": "artwork/YeonjunSketchpage.webp",
+            "description": "Yeonjun TXT Colorful Sketchpage"
         },
         {
             "id": 2,
-            "title": "Jun",
-            "image": "artwork/yeonjun2.png",
-            "description": "Yeonjun"
+            "title": "Yeonjun Fanart",
+            "image": "artwork/YeonjunTXT.webp",
+            "description": "Yeonjun Pink Hair Era "
         },
         {
             "id": 3,
-            "title": "San",
-            "image": "artwork/san.png",
-            "description": "San pouty"
+            "title": "San Ateez",
+            "image": "artwork/SanAteez.webp",
+            "description": "San Ateez pout colorful portrait"
         },
         {
             "id": 4,
             "title": "Sun",
-            "image": "artwork/sun.png",
-            "description": "Illustration"
+            "image": "artwork/ColorfulPortrait.webp",
+            "description": "Girl colorful portrait GIMP"
         },
         {
             "id": 5,
-            "title": "Nolan",
-            "image": "artwork/nolan.png",
-            "description": "Illustration"
+            "title": "Taemin Nolan Németh",
+            "image": "artwork/Taemin.webp",
+            "description": "Taemin Nolan Németh Portrait"
         },
         {
             "id": 6,
-            "title": "Hera Eunomia",
-            "image": "artwork/herahera.png",
-            "description": "Illustration"
+            "title": "Alley",
+            "image": "artwork/2021Klinja.webp",
+            "description": "Alley"
         },
         {
             "id": 7,
             "title": "Bunibuni",
-            "image": "artwork/bunibuni.png",
-            "description": "Illustration"
+            "image": "artwork/Bun.webp",
+            "description": "Girl digital colorful portrait"
         },
         {
             "id": 8,
-            "title": "Leon Artstyle Challenge 2019",
-            "image": "artwork/2021.png",
-            "description": "Illustration"
+            "title": "Hera Helena Eunomia",
+            "image": "artwork/HeraPortrait.webp",
+            "description": "Hera Helena Eunomia Portrait"
         },
         {
             "id": 9,
-            "title": "Leo",
-            "image": "artwork/leorain.jpg",
-            "description": "Illustration"
+            "title": "Leon on a ship",
+            "image": "artwork/LeoChibi.webp",
+            "description": "Leon on a ship"
         },
         {"id": 10,
-            "title": "Leo",
-            "image": "artwork/Captureff.png",
-            "description": "Illustration"
+            "title": "Leon Sketchpage",
+            "image": "artwork/LeonSketchpage.webp",
+            "description": "Leon Sketchpage"
         },
         {"id": 11,
-        "title": "Leo",
-        "image": "artwork/Leon.png",
-        "description": "Illustration"
+        "title": "Leon Artstyle Challenge 2019",
+        "image": "artwork/LeonStyles.webp",
+        "description": "Leon Artstyle Challenge 2019"
     }
         
     ]
