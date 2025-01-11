@@ -3,31 +3,31 @@ const comics = [
     {
         id: 1,
         title: "Phantasmal Ardor",
-        thumbnail: "images/phantasmalardor.jpg",
+        thumbnail: "images/phantasmalardor.webp",
         genres: ["Romance", "Fantasy", "Drama", "Enemies to Lovers"]
     },
     {
         id: 2,
         title: "Precarious Alley",
-        thumbnail: "images/placeholder.jpg",
+        thumbnail: "images/placeholder.webp",
         genres: ["Supernatural", "Action", "Fantasy", "Shounen"]
     },
     {
         id: 3,
         title: "Pages of Enchainment",
-        thumbnail: "images/pagesofencahinment.jpg",
+        thumbnail: "images/pagesofencahinment.webp",
         genres: ["Isekai", "Romance", "Harem", "Josei"]
     },
     {
         id: 4,
         title: "Yesterday's Echo",
-        thumbnail: "images/placeholder.jpg",
+        thumbnail: "images/placeholder.webp",
         genres: ["BL", "Drama", "Omegaverse", "Fantasy"]
     },
     {
         id: 5,
         title: "Kuzman and Figaro",
-        thumbnail: "images/placeholder.jpg",
+        thumbnail: "images/placeholder.webp",
         genres: ["Slice of life", "Comedy", "Oneshots", "Fantasy"]
     }
 ];
