@@ -1228,50 +1228,50 @@ footer {
     }
 }
 
+/* Social Media Container */
 .social-media {
-    padding-top: 20px;
-   justify-content: center;
-   gap: 10px;
-   display: flex;
+    padding-top: 10px; /* Reduced padding for mobile */
+    display: flex;
+    justify-content: center; /* Center-align items */
+    gap: 10px; /* Equal spacing between items */
 }
 
-.cara {
-    width: 40px;
-    height: 45px;
+/* General Icon Sizing */
+.social-link img {
+    width: 30px; /* Adjust icon size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    padding: 5px; /* Uniform padding around all icons */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.vgen {
-    width: 40px;
-    height: 45px;
+.social-link img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    opacity: 0.8; /* Slight opacity change */
 }
 
-.bluesky {
-    width: 40px; 
-    height: 35px; 
-   
-    
-}
-
-a.social-link {
-    width: 40px;
-    height: 52.2px;
-}
-
+/* Specific Icon Adjustments */
 img.bluesky {
-    padding-top: 10px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.tiktok {
-    width: 40px; 
-    height: 35px; 
+    height: 35px; /* Maintain unique size for Bluesky */
 }
 
 img.tiktok {
-    padding-top: 8px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    height: 35px; /* Maintain unique size for TikTok */
+}
+
+img.cara,
+img.vgen {
+    height: 40px; /* Maintain consistent sizes for Cara and VGen */
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    .social-media {
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        gap: 8px; /* Adjust spacing for smaller screens */
+    }
+
+    .social-link img {
+        width: 25px; /* Smaller icons for narrow screens */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
