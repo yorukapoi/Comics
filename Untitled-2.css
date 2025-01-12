@@ -479,8 +479,9 @@ footer {
 
 .logo-layer {
     position: absolute;
-    width: 100%;
+    width: 70%;
     height: auto;
+    padding-bottom: 10px;
     animation: gentleBounce 4s infinite ease-in-out;
 }
 
