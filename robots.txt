@@ -1,0 +1,19 @@
+# Allow the main website to be indexed
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Allow: /
+
+# Block non-preferred versions of the website
+Disallow: http://mousemallow.com
+Disallow: https://www.mousemallow.com/
+
+# Block certain file types like .ppt and .doc files if not needed for SEO
+Disallow: /*.ppt$
+Disallow: /*.doc$
+
+# Block URL parameters that could cause duplicate content issues
+Disallow: /*?*
+
+# Sitemap location
+Sitemap: https://mousemallow.com/sitemap.xml
